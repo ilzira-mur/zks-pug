@@ -1,0 +1,27 @@
+mixin navLink(link, name, active)
+    li.nav-item
+        if(active)
+            a(href=link).nav-link.active=name
+        else
+            a(href=link).nav-link=name
+
+header
+    .header
+        .container
+            a(href="/")
+                img(src="images/logo.svg", alt="Logo")
+            nav
+                ul.nav
+                    +navLink('#', 'Команда', true)
+                    +navLink('#', 'О бюро')
+                    +navLink('#', 'Кейсы')
+                    +navLink('#', 'Услуги')
+                    +navLink('#', 'События')
+                    +navLink('#', 'Карьера')
+        ul.control 
+            li.control-item
+                buttom.control-btn.control-btn_download Скачать брошюру
+            li.control-item
+                buttom.control-btn.control-btn_phone +7 (495) 660-37-60
+            li.control-item
+                buttom.control-btn.control-btn_language Ру
